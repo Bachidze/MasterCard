@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg{
+    background-color: #21092F;
+    width: 100%;
+    height: 240px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.firstcard{
+    background: linear-gradient(169deg, white 0%, #D2D3D9 100%);
+    border-radius: 6px;
+    width: 286px;
+    height: 157px;
+    margin-left: 53px;
+    margin-top: 30px;
+}
+
+.blackrectangle{
+    background-color: #2F2F2F;
+    height: 35px;
+    position: relative;
+    top: 15px;
+}
+
+.greyrectangle{
+    background-color: #ADB5BE;
+    height: 31px;
+    width: 231px;
+    top: 27px;
+    position: relative;
+    left: 26px;
+    border-radius: 6px;
+}
+
+h2{
+    color: white;
+    font-size: 12px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.29px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    padding-top: 6px;
+}
+
+
+
+.secondcard{
+    background: linear-gradient(164deg, #6348FE 0%, #610595 100%);
+    border-radius: 6px;
+    width: 286px;
+    height: 157px;
+    position: relative;
+    top: -64px;
+}
+
+.firstround{
+    width: 33px;
+    height: 33px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 17px;
+    left: 19px;
+}
+
+.secondround{
+    width: 19px;
+    height: 19px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    left: 65px;
+    top: -8px;
+}
+
+.zeros{
+    color: white;
+    font-size: 18px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    letter-spacing: 2.20px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+}
+
+.insideflex{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 76px;
+    position: relative;
+    top: 50px;
+}
+
+h3{
+    color: white;
+    font-size: 11px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.29px;
+    word-wrap: break-word;
+}
+
+h4{
+    color: #21092F;
+    font-size: 12px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+}
+.cardholder{
+    margin-bottom: 10px;
+}
+
+.firstinp{
+    width: 327px;
+    height: 45px;
+    border: 2px solid #DFDEE0;
+    outline: none;
+    border-radius: 10px;
+    padding-left: 16px;
+    color: #21092F;
+    font-size: 18px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.secondinp{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.littleinp,.littleinp1{
+    width: 72px;
+    height: 45px;
+    outline: none;
+    border: 2px solid #D2D3D9;
+    border-radius: 10px;
+    padding-left: 16px;
+    color: #21092F;
+    font-size: 18px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+
+.monthyear{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.lastninp{
+    width: 164px;
+    height: 45px;
+    border: 2px solid #D2D3D9;
+    border-radius: 10px;
+    color: #21092F;
+    font-size: 18px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding-left: 16px;
+}
+
+.lastflex{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.cvc{
+    margin-bottom: 10px;
+}
+
+.lastdiv{
+    position: relative;
+    top: 10px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+button{
+    width: 327px;
+    height: 53px;
+    color: white;
+    font-size: 18px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    word-wrap: break-word;
+    border: none;
+    background-color: #21092F;
+    border-radius: 8px;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+input{
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.littleinp1{
+    margin-left: 6px;
+}
