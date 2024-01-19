@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 1.5s;
 }
 
 .bg{
@@ -234,4 +235,99 @@ input::-webkit-inner-spin-button {
 
 .littleinp1{
     margin-left: 6px;
+}
+
+@media(width >= 1440px){
+    .bg{
+        background-color: #21092F;
+        width: 483px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 130px;
+    }
+
+    .firstcard{
+        width: 447px;
+        height: 245px;
+        position: relative;
+        top: 220px;
+        left: -50px;
+    }
+
+    .secondcard{
+        width: 447px;
+        height: 245px;
+        position: relative;
+        top: -300px;
+        left: -100px;
+    }
+
+    .blackrectangle{
+        background-color: #2F2F2F;
+        height: 55px;
+        position: relative;
+        top: 25px;
+    }
+    
+    .greyrectangle{
+        background-color: #ADB5BE;
+        height: 38px;
+        width: 270px;
+        top: 51px;
+        position: relative;
+        left: 80px;
+        border-radius: 6px;
+    }
+
+    h2{
+        padding-top: 12px;
+    }
+
+    .zeros{
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 3.42px;
+        word-wrap: break-word;
+        position: relative;
+        top: 100px;
+    }
+
+    .insideflex{
+        position: relative;
+        top: 120px;
+        gap: 190px;
+    }
+
+    .firstinp,.secondinp{
+        width: 381px;
+        margin-bottom: 12px;
+    }
+
+    .lastninp{
+        width: 191px;
+    }
+
+    .mmyy input{
+        width: 86px;
+    }
+    .lastflex{
+        margin-top: 19px;
+    }
+
+    button{
+        width: 381px;
+        margin-top: 19px;
+    }
+
+
 }
