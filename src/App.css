@@ -6,6 +6,7 @@
     transition: 1.5s;
 }
 
+
 .bg{
     background-color: #21092F;
     width: 100%;
@@ -112,6 +113,15 @@ h2{
     gap: 76px;
     position: relative;
     top: 50px;
+}
+
+p{
+    color: #FF5050;
+    font-size: 12px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-top: 4px;
 }
 
 h3{

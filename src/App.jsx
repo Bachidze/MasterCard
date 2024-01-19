@@ -1,30 +1,80 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 import InputMask from 'react-input-mask';
+import Function from './components/Function';
+import Function2 from './components/Function2';
+import Function3 from './components/Function3';
+import Function4 from './components/Function4';
+import Form from './components/Form';
+
+
 
 function App() {
-  const [name,setName] = useState('Giorgi Bachidze')
-  const [term,setTerm] = useState('11/24')
-  const [mainDigit,setMainDigit] = useState('0000 0000 0000 0000')
-  const [code,setCode] = useState('0 0 0')
-  const [error,setError] = useState('')
-  
+  const [name, setName] = useState('Giorgi Bachidze');
+  const [term, setTerm] = useState('11/24');
+  const [mainDigit, setMainDigit] = useState('0000 0000 0000 0000');
+  const [code, setCode] = useState('0 0 0');
+  const [nameError, setNameError] = useState('');
+  const [termError, setTermError] = useState('');
+  const [codeError, setCodeError] = useState('');
+  const [cvc, setCvc] = useState('');
 
+  const handleCardNumberChange = (e) => {
+    const cardNumber = e.target.value;
+    setMainDigit(e.target.value);
 
+    if (cardNumber.length < 16) {
+      setCodeError('Card number must be 16 digits');
+    } else {
+      setCodeError('');
+    }
+  };
+
+  const handleCvcNumberChange = (e) => {
+    const cardNumber = e.target.value;
+    setCode(e.target.value);
+
+    if (cardNumber.length < 3) {
+      setCvc('Can’t be blank');
+    } else {
+      setCvc('');
+    }
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    if (e.target.value.trim() === '') {
+      setNameError('Cant Empty');
+    } else {
+      setNameError('');
+    }
+  };
+
+  const handleTermChange = (e) => {
+    setTerm(e.target.value);
+    if (e.target.value.trim() === '') {
+      setTermError('Cant Be Empty');
+    } else {
+      setTermError('');
+    }
+  };
+
+  const main = (e) => {
+    handleCardNumberChange(e)
+    handleCvcNumberChange(e)
+    handleNameChange(e)
+    handleTermChange(e)
+  }
   return (
     <>
-    <div className='flex'>
-
-     <div>
-
-        <div className='firstcard'>
-
-              <div className='blackrectangle'></div>
-              <div className='greyrectangle'>
-                <h2>{code}</h2>
-              </div>
-             
-
+      <div className='flex'>
+       
+      <div>
+          <div className='firstcard'>
+            <div className='blackrectangle'></div>
+            <div className='greyrectangle'>
+              <h2>{code}</h2>
+            </div>
           </div>
 
           <div className='secondcard'>
@@ -33,96 +83,54 @@ function App() {
             <h1 className='zeros'>{mainDigit}</h1>
 
             <div className='insideflex'>
-            <h3>{name}</h3>
-            <h3><span>{term}</span></h3>
+              <h3>{name}</h3>
+              <h3>
+                {term}
+              </h3>
             </div>
-
           </div>
-
-      </div>
-
-      <div>
-
-        <h4 className='cardholder'>
-          Cardholder Name
-        </h4>
-
-        <input
-              style={{border:'2px solid red'}}              
-              onChange={(e)=>setName(e.target.value)}
-              className='firstinp' type="text" name="name"
-               maxLength={23} placeholder='e.g Giorgi Bachidze'
-               required
-        />
-        <p></p>
-
-        <h4 className='secondinp'>
-          Card Number
-        </h4>
-
-        <InputMask
-          style={{border:'2px solid red'}} 
-           mask='9999 9999 9999 9999'
-           maskChar='_'
-           onChange={(e)=>setMainDigit(e.target.value)}
-           className='firstinp' type="text" name="number" 
-           placeholder='e.g 1234 5678 9123'
-           required 
-        />
-        <p></p>
-
-        <div className='lastflex'>
-
-          <div className='mmyy'> 
-            <h4 className='monthyear'>Exp. Date (MM/YY)</h4>
-            <input 
-            style={{border:'2px solid red'}} 
-            onChange={(e)=>setTerm(e.target.value)}
-            className='littleinp' type="text" maxLength={2}
-            placeholder='MM'
-            required
-            />
-            <input 
-             style={{border:'2px solid red'}} 
-             onChange={(e)=>setTerm(e.target.value)}
-             className='littleinp1' type="text" maxLength={2}
-             placeholder='YY'
-             required
-             />
-          </div>
-
-          <div className='lastdiv'> 
-            <h4 className='cvc'>CVC</h4>
-            <input 
-              style={{border:'2px solid red'}} 
-              onChange={(e)=>setCode(e.target.value)}
-              className='lastninp' type="nmuber" maxLength={3}
-              placeholder='e.g. 123'
-              required
-              />
-              
-          </div>
-
         </div>
 
-        <form onClick={(e)=>{
-          e.preventDefault()
-        }}  className='form'>
-          <button>
-            CONFIRM
-          </button>
-        </form>
+        <div>
+    
+         <Function
+         handleNameChange={handleNameChange}
+         nameError={nameError}
+         />
 
+         <Function2
+         handleCardNumberChange={handleCardNumberChange}
+         codeError={codeError}
+         InputMask={InputMask}
+         />
+
+            <div className='lastflex'>
+              <div className='mmyy'>
+              <Function3
+              handleTermChange={handleTermChange}
+              termError={termError}
+              />
+            </div>
+
+            <div className='lastdiv'>
+              <Function4
+              handleCvcNumberChange={handleCvcNumberChange}
+              cvc={cvc}
+              />
+            </div>
+          </div>
+
+        <Form
+        main={main}
+        />
+        </div>
       </div>
 
-    </div>
-
-    <div className='bg'>
-
-    </div>
-
+      <div className='bg'></div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+
