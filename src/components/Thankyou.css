@@ -1,0 +1,25 @@
+.one{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+    ;
+}
+
+.first{
+    color: #21092F;
+    font-size: 28px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    letter-spacing: 3.42px;
+    word-wrap: break-word;
+}
+
+.second{
+    color: #8F8694;
+    font-size: 18px;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    word-wrap: break-word
+}
