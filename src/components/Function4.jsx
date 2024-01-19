@@ -6,7 +6,7 @@ const Function4 = ({handleCvcNumberChange,cvc}) => {
            <h4 className='cvc'>CVC</h4>
               <input
                 onChange={handleCvcNumberChange}
-                style={{ border: cvc ? '2px solid red' : '2px solid green' }}
+                style={{ border: cvc ? '2px solid red' : '2px solid grey' }}
                 className='lastninp'
                 type='text'
                 maxLength={3}

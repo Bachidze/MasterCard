@@ -6,7 +6,7 @@ const Function2 = ({handleCardNumberChange,codeError,InputMask}) => {
                 <h4 className='secondinp'>Card Number</h4>
           <InputMask
             onChange={handleCardNumberChange}
-            style={{ border: codeError ? '2px solid red' : '2px solid green' }}
+            style={{ border: codeError ? '2px solid red' : '2px solid grey' }}
             mask='9999 9999 9999 9999'
             maskChar='_'
             className='firstinp'

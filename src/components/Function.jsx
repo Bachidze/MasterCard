@@ -6,7 +6,7 @@ const Function = ({handleNameChange,nameError}) => {
               <h4 className='cardholder'>Cardholder Name</h4>
           <input
             onChange={handleNameChange}
-            style={{ border: nameError ? '2px solid red' : '2px solid green' }}
+            style={{ border: nameError ? '2px solid red' : '2px solid grey' }}
             className='firstinp'
             type='text'
             name='name'

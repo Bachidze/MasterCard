@@ -6,7 +6,7 @@ const Function3 = ({handleTermChange,termError}) => {
          <h4 className='monthyear'>Exp. Date (MM/YY)</h4>
               <input
                 onChange={handleTermChange}
-                style={{ border: termError ? '2px solid red' : '2px solid green' }}
+                style={{ border: termError ? '2px solid red' : '2px solid grey' }}
                 className='littleinp'
                 type='text'
                 maxLength={2}
@@ -15,7 +15,7 @@ const Function3 = ({handleTermChange,termError}) => {
                 />
                               <input
                 onChange={handleTermChange}
-                style={{ border: termError ? '2px solid red' : '2px solid green' }}
+                style={{ border: termError ? '2px solid red' : '2px solid grey' }}
                 className='littleinp1'
                 type='text'
                 maxLength={2}
